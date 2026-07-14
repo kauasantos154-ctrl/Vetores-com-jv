@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Nomes</title>
+</head>
+<body>
+
+    <button onclick="cadastrarNomes()">Cadastrar nomes</button>
+    <button onclick="mostrarNomes()">Mostrar nomes</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        let nomes = [];
+
+        function cadastrarNomes() {
+            nomes = [];
+
+            for (let i = 0; i < 3; i++) {
+                let nome = prompt("Digite o nome " + (i + 1) + ":");
+                nomes.push(nome);
+            }
+
+            alert("Nomes cadastrados com sucesso!");
+        }
+
+        function mostrarNomes() {
+            let texto = "";
+
+            for (let i = 0; i < nomes.length; i++) {
+                texto += nomes[i] + "<br>";
+            }
+
+            document.getElementById("resultado").innerHTML = texto;
+        }
+    </script>
+
+</body>
+</html>
